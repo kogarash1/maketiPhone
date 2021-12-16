@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css\choices.min.css">
+
+    <script defer src="js\choices.min.js"></script>
+    <script defer src="js\script.js"></script>
+    <title>Phone</title>
+    
+    <link rel="shortcet icon" href="img\apple.svg" type="image/x-icon">
+
+    <link rel="preload" href="fonts\SFUIText-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts\SFUIText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts\SFUIText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_container">
+                <img src="img\apple.svg" alt="This is logo!" class="geader_logo">
+                <nav class="HEADER_NAVIGATION navigation">
+                    <ul class="navigation_list">
+                        <li class="navigation_item"><a href="#">Оформить предзаказ</a></li>
+                        <li class="navigation_item"><a href="#">Доставка</a></li>
+                        <li class="navigation_item"><a href="#">Официальный сайт Apple</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <selection class="main_selection offer">
+            <div class="container">
+                <div class="offer__container">
+                    <h1 class="offer_main_title">iPhone 13</h1>
+                    <h2 class="offer_title">Ближе, чем можно представить</h2>
+                    <p class="offer_price">от 79 000 руб.</p>
+                    <button class="offer_btn btn">Оформить предзаказ</button>
+                </div>
+            </div>
+        </selection>
+        <selection class="main_selection features">
+            <div class="container">
+                <h2 class="features_title">iPhone 13. Ничего лишнего</h2>
+                <ul class="features_list">
+                    <li class="features_item card">
+                        <img src="img\camera.jpg" srcset="img\camera 2x.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        <h3 class="card_title">Какмера</h3>
+                        <p class="card_description">Система камер PRO</p>
+                    </li>
+                    <li class="features_item card">
+                        <picture>
+                            <source>
+                            <img src="img\compect.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        </picture>
+                        <h3 class="card_title">Комлектация</h3>
+                        <p class="card_description">Зарядное устройство. Беспроводные наушники.</p>
+                    </li>
+                    <li class="features_item card"><img src="img\color.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        <h3 class="card_title">Цвет</h3>
+                        <p class="card_description">Глубоководный синий. Графитовый</p>
+                    </li>
+                    <li class="features_item card">
+                        <img src="img\frame.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        <h3 class="card_title">Корпус</h3>
+                        <p class="card_description">Водонипроницаеммый и противоударный корпус</p>
+                    </li>
+                    <li class="features_item card">
+                        <img src="img\line.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        <h3 class="card_title">Линейка</h3>
+                        <p class="card_description">iPhone 13, iPhone mini, iPhone 13 Pro и 13 Pro Max</p>
+                    </li>
+                    <li class="features_item card"><img src="img\charger_magnetic.jpg" alt="This is an iPhone camera!" class="card_picture">
+                        <h3 class="card_title">Зарядка</h3>
+                        <p class="card_description">Аккумулятор-магнит.</p>
+                    </li>
+                </ul>
+            </div>
+        </selection>
+        <selection class="main_selection order">
+            <div class="container">
+                <h2 class="order_title">Оформить заказ</h2>
+            </div>
+            <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="order_form form" id="form-order">
+                <fieldset class="form_box">
+                    <legend class="form_titile-box">Персональные данные</legend>
+
+                    <label for="fullName" class="form_label">ФИО<sup>*</sup></label>
+                    <input type="text" class="form_input" id="fullName" name="fullName" required>
+
+                    <label for="Phone" class="form_label">Телефон<sup>*</sup></label>
+                    <input type="text" class="form_input" id="Phone" name="Phone" required>
+
+                    <label for="mail" class="form_label">E-mail<sup>*</sup></label>
+                    <input type="mail" class="form_input" id="mail" name="mail" required>
+
+                </fieldset>
+                <fieldset class="form_box">
+                    <legend class="form_titile-box">Адрес доставки</legend>
+
+                    <label for="city" class="form_label">Город<sup>*</sup></label>
+                    <input type="text" class="form_input" id="city" name="city" required>
+
+                    <label for="ind" class="form_label">Индекс<sup>*</sup></label>
+                    <input type="text" class="form_input" id="ind" name="ind" required>
+
+                    <label for="adress" class="form_label">Адрес<sup>*</sup></label>
+                    <input type="mail" class="form_input" id="adress" name="adress" required>
+
+                </fieldset>
+                <fieldset class="form_box">
+                    <legend class="form_titile-box">Выбор мадели</legend>
+
+                    <label for="model" class="form_label">Модель</label>
+                    <select name="model" id="model" class="form_select">
+                        <option value="iPhone 13">iPhone 13</option>
+                        <option value="iPhonem13ini">iPhone mini</option>
+                        <option value="iPhone13Pro">iPhone Pro</option>
+                        <option value="iPhone13ProMax">iPhone 13 Pro Max</option>
+                    </select>
+                    <label for="model" class="form_label">Цвет</label>
+                    <select name="model" id="color" class="form_select">
+                        <option value="black">Черный</option>
+                        <option value="white">Белый</option>
+                        <option value="blue">Глубоководный синий</option>
+                        <option value="grey">Графитовый</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form_box">
+                    <legend class="form_titile-box">Аксессуары</legend>
+                    <label class="form_label checkbox">
+                        <input class="checkbox_input" type="checkbox" name="accessories" id="case">Чехол
+                    </label>
+
+                    <label class="form_label checkbox">
+                        <input class="checkbox_input" type="checkbox" name="accessories" id="case">Наушники
+                    </label>
+
+                    <label class="form_label checkbox">
+                        <input class="checkbox_input" type="checkbox" name="accessories" id="case">Защитное стекло
+                    </label>
+
+                    <label class="form_label checkbox">
+                        <input class="checkbox_input" type="checkbox" name="accessories" id="case">Зарядное устройство
+                    </label>
+                </fieldset>
+           </form>  
+
+           <button type="submit" class="form_sumbit btn" form="form-order">Оформить</button>
+        </selection>
+    </main>
+    <footer class="footer"></footer>
+</body>
+</html>
